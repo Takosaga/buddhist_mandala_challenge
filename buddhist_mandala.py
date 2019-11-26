@@ -9,15 +9,15 @@ screen.bgcolor("black")
 #outer cirlce of the mandala
 def outer_circle():
     tracy.pendown()
-    tracy.pensize(15)
+    tracy.pensize(5)
     tracy.color("white")
-    tracy.circle(280)
+    tracy.circle(270)
 
 #moving up without leaving marks
-def move_up():
+def move_up(movement):
     tracy.penup()
     tracy.left(90)
-    tracy.forward(20)
+    tracy.forward(movement)
     tracy.right(90)
 
 #making rainbow circle 
@@ -40,14 +40,23 @@ def rainbow_first_circle():
             tracy.circle(260,360/color_change,color_change)
         else:
             tracy.color("orange")
-            tracy.circle(265,360/color_change,color_change)
+            tracy.circle(260,360/color_change,color_change)
+
+#makes another white inner circle
+def white_circle():
+    tracy.pendown()
+    tracy.pensize(15)
+    tracy.color("white")
+    tracy.circle(245)
 
 #calling all functions
 tracy.penup()
 tracy.speed(0)
-tracy.setposition(0,-280)
+tracy.setposition(0,-270)
 outer_circle()
-move_up()
+move_up(10)
 rainbow_first_circle()
+move_up(15)
+white_circle()
 
 turtle.done()
