@@ -49,6 +49,28 @@ def white_circle():
     tracy.color("white")
     tracy.circle(245)
 
+def white_cricle_accents():
+    tracy.penup()
+    for i in range(15):
+        tracy.left(90)
+        tracy.forward(7.5)
+        tracy.pendown()
+        tracy.color("red")
+        tracy.pensize(3)
+        tracy.right(180)
+        tracy.forward(7.5)
+        tracy.left(90)
+        tracy.circle(245,12,20)
+        tracy.left(90)
+        tracy.forward(7.5)
+        tracy.backward(7.5)
+        tracy.right(90)
+        tracy.penup()
+        tracy.circle(245,12,20)
+
+
+
+
 #calling all functions
 tracy.penup()
 tracy.speed(0)
@@ -57,6 +79,10 @@ outer_circle()
 move_up(10)
 rainbow_first_circle()
 move_up(15)
+tracy.begin_fill()
 white_circle()
+tracy.color("green")
+tracy.end_fill()
+white_cricle_accents()
 
 turtle.done()
