@@ -72,7 +72,7 @@ def white_cricle_accents():
     tracy.penup()
     for i in range(15):
         if i % 3 == 0:
-            tracy.color("blue")
+            tracy.color("cyan")
             circle_sectors()
         elif i % 3 == 1:
             tracy.color("green")
@@ -85,7 +85,7 @@ def white_cricle_accents():
 def inner_circle_deco():
     tracy.begin_fill()
     tracy.pendown()
-    tracy.color("black")
+    tracy.color("red")
     tracy.left(45)
     for i in range(4):
         tracy.forward(math.pi*200*2/12)
@@ -98,6 +98,21 @@ def inner_circle_deco():
     tracy.end_fill()
     tracy.right(45)
     tracy.penup()
+
+#marking the circles on the square
+def circle_square_marks():
+    circle_angle = math.degrees(math.asin(50/200))*2
+    square_angle = (90 - circle_angle)/2
+    print(circle_angle)
+    tracy.pensize(2)
+    tracy.color("black")
+    for i in range(4):
+        tracy.penup()
+        tracy.circle(200,square_angle)
+        tracy.pendown()
+        tracy.circle(200,circle_angle)
+        tracy.penup()
+        tracy.circle(200,square_angle)
 
 #calling all functions
 tracy.penup()
@@ -114,5 +129,6 @@ tracy.end_fill()
 white_cricle_accents()
 move_up(45)
 inner_circle_deco()
+circle_square_marks()
 
 turtle.done()
