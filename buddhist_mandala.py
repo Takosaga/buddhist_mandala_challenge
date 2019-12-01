@@ -49,6 +49,7 @@ def white_circle():
     tracy.color("white")
     tracy.circle(245)
 
+#the code to go around in white circle
 def circle_sectors():
     tracy.left(90)
     tracy.forward(7.5)
@@ -65,6 +66,7 @@ def circle_sectors():
     tracy.penup()
     tracy.circle(245,12,20)
 
+#code to change the color of accents
 def white_cricle_accents():
     tracy.penup()
     for i in range(15):
