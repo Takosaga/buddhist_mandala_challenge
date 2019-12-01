@@ -80,6 +80,14 @@ def white_cricle_accents():
             tracy.color("red")
             circle_sectors()
 
+#decorations for innercircle
+def inner_circle_deco():
+    tracy.begin_fill()
+    tracy.pendown()
+    tracy.color("black")
+    tracy.circle(200,360,4)
+    tracy.color("orange")
+    tracy.end_fill()
 
 #calling all functions
 tracy.penup()
@@ -94,5 +102,7 @@ white_circle()
 tracy.color("green")
 tracy.end_fill()
 white_cricle_accents()
+move_up(45)
+inner_circle_deco()
 
 turtle.done()
