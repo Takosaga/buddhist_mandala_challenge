@@ -1,4 +1,5 @@
 import turtle
+import math
 
 #intialize graphics
 screen = turtle.Screen()
@@ -85,9 +86,18 @@ def inner_circle_deco():
     tracy.begin_fill()
     tracy.pendown()
     tracy.color("black")
-    tracy.circle(200,360,4)
+    tracy.left(45)
+    for i in range(4):
+        tracy.forward(math.pi*200*2/12)
+        tracy.right(135)
+        tracy.circle(50,270)
+        tracy.right(135)
+        tracy.forward(math.pi*200*2/12)
+        tracy.left(90)
     tracy.color("orange")
     tracy.end_fill()
+    tracy.right(45)
+    tracy.penup()
 
 #calling all functions
 tracy.penup()
