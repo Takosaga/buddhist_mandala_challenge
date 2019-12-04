@@ -137,6 +137,9 @@ def circle_square_marks_second():
         tracy.penup()
         tracy.circle(170,square_angle)
 
+def inner_sqaure_deco():
+    tracy.pendown()
+
 #calling all functions
 tracy.penup()
 tracy.speed(0)
@@ -155,5 +158,7 @@ inner_circle_deco()
 circle_square_marks()
 move_up(30)
 circle_square_marks_second()
+move_up(35)
+inner_sqaure_deco()
 
 turtle.done()
