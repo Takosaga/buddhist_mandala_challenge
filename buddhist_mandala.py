@@ -169,9 +169,23 @@ def inner_sqaure_deco():
         tracy.penup()
         tracy.left(135)
         tracy.forward(150)
-        tracy.color("cyan")
+        if i % 4 == 0:
+            tracy.color("cyan")
+        elif i % 4 == 1:
+            tracy.color("green")
+        elif i % 4 == 2:
+            tracy.color("red")
+        else:
+            tracy.color("yellow")
         tracy.end_fill()
         tracy.backward(150)
+
+#circle right inside of inner square deco
+def inner_inner_circle():
+    tracy.pendown()
+    tracy.color("purple")
+    tracy.pensize(5)
+    tracy.circle(100)
 
 #calling all functions
 tracy.penup()
@@ -193,5 +207,8 @@ move_up(30)
 circle_square_marks_second()
 move_up(20)
 inner_sqaure_deco()
+tracy.right(90)
+move_up(50)
+inner_inner_circle()
 
 turtle.done()
