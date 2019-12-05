@@ -187,6 +187,22 @@ def inner_inner_circle():
     tracy.pensize(5)
     tracy.circle(100)
 
+#final portion of inner circle
+def final_circle_deco():
+    tracy.color("black")
+    tracy.pendown()
+    tracy.circle(40)
+    tracy.right(90)
+    for i in range(5):
+        if i % 3 == 0:
+            tracy.color("green")
+        elif i % 3 == 1:
+            tracy.color("yellow")
+        else:
+            tracy.color("red")
+        tracy.circle(29,252)
+        tracy.right(180)
+
 #calling all functions
 tracy.penup()
 tracy.speed(0)
@@ -210,5 +226,7 @@ inner_sqaure_deco()
 tracy.right(90)
 move_up(50)
 inner_inner_circle()
+move_up(60)
+final_circle_deco()
 
 turtle.done()
