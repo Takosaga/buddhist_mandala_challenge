@@ -5,6 +5,7 @@ import math
 screen = turtle.Screen()
 screen.title("Buddhist Mandala")
 tracy = turtle.Turtle()
+tracy.shape("turtle")
 screen.bgcolor("black")
 
 #outer cirlce of the mandala
@@ -197,11 +198,18 @@ def final_circle_deco():
         if i % 3 == 0:
             tracy.color("green")
         elif i % 3 == 1:
-            tracy.color("yellow")
-        else:
             tracy.color("red")
+        else:
+            tracy.color("blue")
         tracy.circle(29,252)
         tracy.right(180)
+
+#center of the circle
+def tracy_turtle():
+    tracy.penup()
+    tracy.color("white")
+    tracy.backward(40)
+    tracy.shapesize(2,2,2)
 
 #calling all functions
 tracy.penup()
@@ -228,5 +236,6 @@ move_up(50)
 inner_inner_circle()
 move_up(60)
 final_circle_deco()
+tracy_turtle()
 
 turtle.done()
